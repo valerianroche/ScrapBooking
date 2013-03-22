@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Book" representedClassName="Book" syncable="YES">
+        <attribute name="alpha" optional="YES" attributeType="Double" defaultValueString="1" syncable="YES"/>
+        <attribute name="couleur" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="couleurAsString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreation" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateModif" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="descrip" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="createur" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="books" inverseEntity="Utilisateur" syncable="YES"/>
+        <relationship name="editeur" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Utilisateur" inverseName="books" inverseEntity="Utilisateur" syncable="YES"/>
+        <relationship name="layers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Layer" inverseName="book" inverseEntity="Layer" syncable="YES"/>
+    </entity>
+    <entity name="Layer" representedClassName="Layer" syncable="YES">
+        <attribute name="alpha" optional="YES" attributeType="Double" defaultValueString="1" syncable="YES"/>
+        <attribute name="classe" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="image" optional="YES" transient="YES" syncable="YES"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="layerOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rectAsString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rotationRad" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="textAsData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="book" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="layers" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <entity name="Utilisateur" representedClassName="Utilisateur" syncable="YES">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="books" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Book" inverseName="editeur" inverseEntity="Book" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="160" positionY="192" width="128" height="210"/>
+        <element name="Layer" positionX="421" positionY="350" width="128" height="225"/>
+        <element name="Utilisateur" positionX="358" positionY="36" width="128" height="88"/>
+    </elements>
+</model>
