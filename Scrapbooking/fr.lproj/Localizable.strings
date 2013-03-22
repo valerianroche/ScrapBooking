@@ -8,7 +8,7 @@
 "BOOK" = "Book";
 "BOOKS" = "Books";
 "ADD_BOOK" = "Ajouter un book...";
-"NO_BOOK" = "AUcun book disponible";
+"NO_BOOK" = "Aucun book disponible";
 "BUTTON_CREATE_BOOK" = "Tapper le bouton pour commencer";
 "CREATE_BOOK" = "C'est parti!";
 "NEW_BOOK" = "Nouveau Book";
@@ -23,7 +23,7 @@
 "FAILURE" = "Echec";
 "SUCCESS" = "Succès";
 "CAPTURE_FAIL" = "Echec de l'enregistrement";
-"CAPTURE_SUCCESS" = "Enregistrement réussi;
+"CAPTURE_SUCCESS" = "Enregistrement réussi";
 
 "NO_LAYER" = "Aucune couche pour l'instant";
 "LAYER_PICTURE" = "Couche - Photo";

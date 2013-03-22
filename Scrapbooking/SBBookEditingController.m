@@ -82,6 +82,7 @@
         [self.navigationItem setLeftBarButtonItem:photo animated:NO];
     }
     
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     [self.view setMultipleTouchEnabled:YES];
 	// Do any additional setup after loading the view.
 }
@@ -479,6 +480,9 @@
     if ([bouttons count]) {
         [bouttons insertObject:barButtonItem atIndex:0];
         [self.navigationItem setLeftBarButtonItems:bouttons animated:NO];
+    }
+    else {
+        [self.navigationItem setLeftBarButtonItem:barButtonItem];
     }
 }
 
