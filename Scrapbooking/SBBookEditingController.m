@@ -444,25 +444,27 @@
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    int index = [self.view.subviews indexOfObject:selectedView];
-    if (index != NSNotFound) {
-        Layer *layer = [[self.store allLayersForBook:self.book] objectAtIndex:index];
-        CGRect newRect = CGRectMake((layer.rect.origin.x + (layer.rect.size.width)/2 + decalageX) - layer.rect.size.width * zoom/2, (layer.rect.origin.y + (layer.rect.size.height)/2 +decalageY) - layer.rect.size.height * zoom/2, layer.rect.size.width * zoom, layer.rect.size.height * zoom);
-        
-        if (layer.text) {
-            NSMutableAttributedString *temp = [layer.text mutableCopy];
-            NSRange *range = NULL;
-            UIFont *font = [temp attribute:NSFontAttributeName atIndex:0 effectiveRange:range];
-            [temp addAttribute:NSFontAttributeName value:[font fontWithSize:(int)[font pointSize]*zoom] range:NSMakeRange(0, [temp length])];
-            layer.text = temp;
+    if (selectedView) {
+        int index = [self.view.subviews indexOfObject:selectedView];
+        if (index != NSNotFound) {
+            Layer *layer = [[self.store allLayersForBook:self.book] objectAtIndex:index];
+            CGRect newRect = CGRectMake((layer.rect.origin.x + (layer.rect.size.width)/2 + decalageX) - layer.rect.size.width * zoom/2, (layer.rect.origin.y + (layer.rect.size.height)/2 +decalageY) - layer.rect.size.height * zoom/2, layer.rect.size.width * zoom, layer.rect.size.height * zoom);
+            
+            if (layer.text) {
+                NSMutableAttributedString *temp = [layer.text mutableCopy];
+                NSRange *range = NULL;
+                UIFont *font = [temp attribute:NSFontAttributeName atIndex:0 effectiveRange:range];
+                [temp addAttribute:NSFontAttributeName value:[font fontWithSize:(int)[font pointSize]*zoom] range:NSMakeRange(0, [temp length])];
+                layer.text = temp;
+            }
+            
+            [layer setRect:newRect];
+            [layer setRotationRad:[NSNumber numberWithDouble:layer.rotationRad.doubleValue + angle]];
+            
+            [self.store saveChanges];
         }
         
-        [layer setRect:newRect];
-        [layer setRotationRad:[NSNumber numberWithDouble:layer.rotationRad.doubleValue + angle]];
-        
-        [self.store saveChanges];
     }
-    
     selectedView = nil;
 }
 

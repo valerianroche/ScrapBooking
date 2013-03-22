@@ -50,7 +50,7 @@
 }
 
 -(void)willSave {
-    if (self.image) {
+    if (self.image && !self.imageData) {
         NSData *data = UIImagePNGRepresentation(self.image);
         [self setPrimitiveValue:data forKey:@"imageData"];
     }
