@@ -146,6 +146,9 @@
         _book = book;
         [self.store loadAllLayersForBook:book];
         [self.navigationItem setTitle:_book.name];
+        if (tableControllerLayers) {
+            [tableControllerLayers setTabLayers:[self.store allLayersForBook:book]];
+        }
         if (book) {
             [self.view setBackgroundColor:[book.couleur colorWithAlphaComponent:book.alpha.doubleValue]];
             /*if (book.alpha.doubleValue != 1) {

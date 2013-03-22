@@ -55,6 +55,12 @@
     [self.delegate majPopUp:[self hauteurTable]];
 }
 
+-(void)setTabLayers:(NSArray *)tabLayers {
+    if (_tabLayers != tabLayers && self.tableView) {
+        _tabLayers = tabLayers;
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     self.vueEdition = nil;
