@@ -56,7 +56,7 @@
     [super viewDidLoad];
     
     if (self.book) {
-        UIBarButtonItem *organizeLayers = [[UIBarButtonItem alloc] initWithTitle:@"Layers" style:UIBarButtonItemStylePlain target:self action:@selector(afficheLayers:)];
+        UIBarButtonItem *organizeLayers = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"LAYERS",nil) style:UIBarButtonItemStylePlain target:self action:@selector(afficheLayers:)];
         
         UIBarButtonItem *addLayer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addLayer:)];
         
@@ -69,10 +69,10 @@
         }
     }
     else {
-        [self.navigationItem setTitle:@"No book available"];
+        [self.navigationItem setTitle:NSLocalizedString(@"NO_BOOK",nil)];
     }
     
-    UIBarButtonItem *photo = [[UIBarButtonItem alloc] initWithTitle:@"Capture" style:UIBarButtonItemStylePlain target:self action:@selector(saveBook)];
+    UIBarButtonItem *photo = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CAPTURE",nil) style:UIBarButtonItemStylePlain target:self action:@selector(saveBook)];
     NSMutableArray *bouttons = [[self.navigationItem leftBarButtonItems] mutableCopy];
     if ([bouttons count]) {
         [bouttons addObject:photo];
@@ -129,7 +129,7 @@
 
 -(void)setBook:(Book *)book {
     if (!_book && book) {
-        UIBarButtonItem *organizeLayers = [[UIBarButtonItem alloc] initWithTitle:@"Layers" style:UIBarButtonItemStylePlain target:self action:@selector(afficheLayers:)];
+        UIBarButtonItem *organizeLayers = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"LAYERS",nil) style:UIBarButtonItemStylePlain target:self action:@selector(afficheLayers:)];
         
         UIBarButtonItem *addLayer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addLayer:)];
         [self.navigationItem setRightBarButtonItems:[NSArray arrayWithObjects:organizeLayers, addLayer, nil] animated:NO];
@@ -217,10 +217,10 @@
     didFinishSavingWithError: (NSError *) error
                  contextInfo: (void *) contextInfo {
     if (error != NULL) {
-        [[[UIAlertView alloc] initWithTitle:@"Failure" message:@"Capture failes" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"FAILURE",nil) message:NSLocalizedString(@"CAPTURE_FAIL",nil) delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
     }
     else {
-        [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Capture successful" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SUCCESS",nil) message:NSLocalizedString(@"CAPTURE_SUCCESS",nil) delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil] show];
     }
 }
 
@@ -474,7 +474,7 @@
 #pragma mark - Split View delegate
 
 -(void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc {
-    [barButtonItem setTitle:@"Books"];
+    [barButtonItem setTitle:NSLocalizedString(@"BOOKS",nil)];
     NSMutableArray *bouttons = [[self.navigationItem leftBarButtonItems] mutableCopy];
     if ([bouttons count]) {
         [bouttons insertObject:barButtonItem atIndex:0];

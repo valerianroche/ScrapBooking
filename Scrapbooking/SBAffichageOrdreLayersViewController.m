@@ -94,19 +94,19 @@
         Layer *layer = [self.tabLayers objectAtIndex:[indexPath indexAtPosition:1]];
         [cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
         if ([layer imageData]) {
-            [[cell textLabel] setText:[NSString stringWithFormat:@"Layer - Picture"]];
+            [[cell textLabel] setText:[NSString stringWithFormat:NSLocalizedString(@"LAYER_PICTURE",nil)]];
             [[cell detailTextLabel] setText:@""];
             [[cell imageView] setImage:layer.image];
         }
         
         else {
-            [[cell textLabel] setText:[NSString stringWithFormat:@"Layer - String"]];
+            [[cell textLabel] setText:[NSString stringWithFormat:NSLocalizedString(@"LAYER_STRING",nil)]];
             [[cell detailTextLabel] setText:layer.text.string];
             [[cell imageView] setImage:nil];
         }
     }
     else {
-        [[cell textLabel] setText:@"No layer for now"];
+        [[cell textLabel] setText:NSLocalizedString(@"NO_LAYER",nil)];
         [[cell detailTextLabel] setText:@""];
         [[cell imageView] setImage:nil];
         

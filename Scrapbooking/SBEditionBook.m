@@ -39,7 +39,7 @@
     [super viewDidLoad];
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button setTitle:@"Delete" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"DELETE",nil) forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [[button titleLabel] setFont:[UIFont boldSystemFontOfSize:20]];
     [button setBackgroundImage:[[UIImage imageNamed:@"Supprimer.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
@@ -132,7 +132,7 @@
 
 -(NSArray *)nomCouleurs {
     if (!nomCouleurs)
-        nomCouleurs = [NSArray arrayWithObjects:@"White", @"Yellow", @"Green", @"Orange", @"Red", @"Purple", @"Blue", @"Brown", @"Gray", @"Black", nil];
+        nomCouleurs = [NSArray arrayWithObjects:NSLocalizedString(@"WHITE",nil), NSLocalizedString(@"YELLOW",nil), NSLocalizedString(@"GREEN",nil), NSLocalizedString(@"ORANGE",nil), NSLocalizedString(@"RED",nil), NSLocalizedString(@"PURPLE",nil), NSLocalizedString(@"BLUE",nil), NSLocalizedString(@"BROWN",nil), NSLocalizedString(@"GRAY",nil), NSLocalizedString(@"BLACK",nil), nil];
     return nomCouleurs;
 }
 
@@ -174,11 +174,11 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0)
-        return @"Name";
+        return NSLocalizedString(@"NAME",nil);
     else if (section == 1)
-        return @"Description";
+        return NSLocalizedString(@"DESCRIPTION",nil);
     else if (section == 2)
-        return @"Appearance";
+        return NSLocalizedString(@"APPEARANCE",nil);
     else
         return @"";
 }

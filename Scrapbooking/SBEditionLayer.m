@@ -39,7 +39,7 @@
     [super viewDidLoad];
     
     self.suppress = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.suppress setTitle:@"Delete" forState:UIControlStateNormal];
+    [self.suppress setTitle:NSLocalizedString(@"DELETE",nil) forState:UIControlStateNormal];
     [self.suppress setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [[self.suppress titleLabel] setFont:[UIFont boldSystemFontOfSize:20]];
     [self.suppress setBackgroundImage:[[UIImage imageNamed:@"Supprimer.png"] stretchableImageWithLeftCapWidth:10 topCapHeight:0] forState:UIControlStateNormal];
@@ -121,7 +121,7 @@
 
 -(NSArray *)nomCouleurs {
     if (!nomCouleurs)
-        nomCouleurs = [NSArray arrayWithObjects:@"White", @"Yellow", @"Green", @"Orange", @"Red", @"Purple", @"Blue", @"Brown", @"Gray", @"Black", nil];
+        nomCouleurs = [NSArray arrayWithObjects:NSLocalizedString(@"WHITE",nil), NSLocalizedString(@"YELLOW",nil), NSLocalizedString(@"GREEN",nil), NSLocalizedString(@"ORANGE",nil), NSLocalizedString(@"RED",nil), NSLocalizedString(@"PURPLE",nil), NSLocalizedString(@"BLUE",nil), NSLocalizedString(@"BROWN",nil), NSLocalizedString(@"GRAY",nil), NSLocalizedString(@"BLACK",nil), nil];
     return nomCouleurs;
 }
 
@@ -155,17 +155,17 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0)
-        return @"Transparency";
+        return NSLocalizedString(@"TRANSPARENCY",nil);
     else if (section == 1) {
         if (choixType == 0) {
-            return @"Text";
+            return NSLocalizedString(@"TEXT",nil);
         }
         else {
             return @"";
         }
     }
     else if (section == 2) {
-            return @"Text Colour";
+            return NSLocalizedString(@"TEXT_COLOR",nil);
     }
     else return @"";
 }
@@ -201,7 +201,7 @@
         
         if (!self.champNom) {
             self.champNom = [[UITextField alloc] initWithFrame:CGRectMake(10, 0, cell.bounds.size.width-40, cell.bounds.size.height-0)];
-            [self.champNom setPlaceholder:@"Text"];
+            [self.champNom setPlaceholder:NSLocalizedString(@"TEXT",nil)];
             [self.champNom setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
             [self.champNom setDelegate:self];
             [self.champNom setAutocapitalizationType:UITextAutocapitalizationTypeSentences];

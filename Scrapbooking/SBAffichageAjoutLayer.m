@@ -127,7 +127,7 @@
 
 -(NSArray *)nomCouleurs {
     if (!nomCouleurs)
-        nomCouleurs = [NSArray arrayWithObjects:@"White", @"Yellow", @"Green", @"Orange", @"Red", @"Purple", @"Blue", @"Brown", @"Gray", @"Black", nil];
+        nomCouleurs = [NSArray arrayWithObjects:NSLocalizedString(@"WHITE",nil), NSLocalizedString(@"YELLOW",nil), NSLocalizedString(@"GREEN",nil), NSLocalizedString(@"ORANGE",nil), NSLocalizedString(@"RED",nil), NSLocalizedString(@"PURPLE",nil), NSLocalizedString(@"BLUE",nil), NSLocalizedString(@"BROWN",nil), NSLocalizedString(@"GRAY",nil), NSLocalizedString(@"BLACK",nil), nil];
     return nomCouleurs;
 }
 
@@ -176,23 +176,23 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0)
-        return @"Choose the layer type";
+        return NSLocalizedString(@"CHOOSE_LAYER_TYPE",nil);
     else if (section == 1)
-        return @"Transparency";
+        return NSLocalizedString(@"TRANSPARENCY",nil);
     else if (section == 2) {
         if (choixType == 0) {
-            return @"Set the text";
+            return NSLocalizedString(@"SET_TEXT",nil);
         }
         else {
-            return @"Choose picture";
+            return NSLocalizedString(@"CHOOSE_PICTURE",nil);
         }
     }
     else {
         if (choixType == 0) {
-            return @"Text Colour";
+            return NSLocalizedString(@"TEXT_COLOR",nil);
         }
         else
-            return @"Preview";
+            return NSLocalizedString(@"PREVIEW",nil);
     }
 }
 
@@ -215,10 +215,10 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifierChoixType];
         
         if (rang == 0) {
-            [[cell textLabel] setText:@"Text"];
+            [[cell textLabel] setText:NSLocalizedString(@"TEXT",nil)];
         }
         else {
-            [[cell textLabel] setText:@"Picture"];
+            [[cell textLabel] setText:NSLocalizedString(@"PICTURE",nil)];
         }
         
         if (choixType == rang)
@@ -246,7 +246,7 @@
             
             if (!self.champNom) {
                 self.champNom = [[UITextField alloc] initWithFrame:CGRectMake(10, 0, cell.bounds.size.width-40, cell.bounds.size.height-0)];
-                [self.champNom setPlaceholder:@"Text"];
+                [self.champNom setPlaceholder:NSLocalizedString(@"TEXT",nil)];
                 [self.champNom setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
                 [self.champNom setDelegate:self];
                 [self.champNom setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
@@ -264,9 +264,9 @@
             }
             
             if (rang == 0)
-                [[cell textLabel] setText:@"Pick an existing picture"];
+                [[cell textLabel] setText:NSLocalizedString(@"PICK_EXISTING",nil)];
             else
-                [[cell textLabel] setText:@"Take a picture"];
+                [[cell textLabel] setText:NSLocalizedString(@"TAKE_NEW",nil)];
         }
     }
     

@@ -1,0 +1,53 @@
+/* 
+  Localize.strings
+  Scrapbooking
+
+  Created by Valérian Roche on 22/03/13.
+  Copyright (c) 2013 Valérian Roche. All rights reserved.
+*/
+"BOOK" = "Book";
+"BOOKS" = "Books";
+"ADD_BOOK" = "Add new book...";
+"NO_BOOK" = "No book available";
+"BUTTON_CREATE_BOOK" = "Tap the button to create one";
+"CREATE_BOOK" = "Let's go!";
+"NEW_BOOK" = "New Book";
+"NAME" = "Name";
+"DESCRIPTION" = "Description";
+"APPEARANCE" = "Appearance";
+"DELETE" = "Delete";
+
+"LAYERS" = "Layers";
+"CAPTURE" = "Capture";
+
+"FAILURE" = "Failure";
+"SUCCESS" = "Success";
+"CAPTURE_FAIL" = "Capture failed";
+"CAPTURE_SUCCESS" = "Capture succeeded";
+
+"NO_LAYER" = "No layer for now";
+"LAYER_PICTURE" = "Layer - Picture";
+"LAYER_STRING" = "Layer - String";
+
+"TEXT" = "Text";
+"TRANSPARENCY" = "Transparency";
+"TEXT_COLOR" = "Text Colour";
+
+"CHOOSE_LAYER_TYPE" = "Choose the layer type";
+"SET_TEXT" = "Set the text";
+"CHOOSE_PICTURE" = "Choose picture";
+"PREVIEW" = "Preview";
+"PICTURE" = "Picture";
+"PICK_EXISTING" = "Pick an existing picture";
+"TAKE_NEW" = "Take a picture";
+
+"WHITE" ="White";
+"YELLOW" = "Yellow";
+"GREEN" = "Green";
+"ORANGE" = "Orange";
+"RED" = "Red";
+"PURPLE" = "Purple";
+"BLUE" = "Blue";
+"BROWN" = "Brown";
+"GRAY" = "Gray";
+"BLACK" = "Black";

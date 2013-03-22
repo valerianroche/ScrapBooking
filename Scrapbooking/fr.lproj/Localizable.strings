@@ -1,0 +1,53 @@
+/* 
+  Localize.strings
+  Scrapbooking
+
+  Created by Valérian Roche on 22/03/13.
+  Copyright (c) 2013 Valérian Roche. All rights reserved.
+*/
+"BOOK" = "Book";
+"BOOKS" = "Books";
+"ADD_BOOK" = "Ajouter un book...";
+"NO_BOOK" = "AUcun book disponible";
+"BUTTON_CREATE_BOOK" = "Tapper le bouton pour commencer";
+"CREATE_BOOK" = "C'est parti!";
+"NEW_BOOK" = "Nouveau Book";
+"NAME" = "Nom";
+"DESCRIPTION" = "Description";
+"APPEARANCE" = "Apparance";
+"DELETE" = "Supprimer";
+
+"LAYERS" = "Couches";
+"CAPTURE" = "Capture d'écran";
+
+"FAILURE" = "Echec";
+"SUCCESS" = "Succès";
+"CAPTURE_FAIL" = "Echec de l'enregistrement";
+"CAPTURE_SUCCESS" = "Enregistrement réussi;
+
+"NO_LAYER" = "Aucune couche pour l'instant";
+"LAYER_PICTURE" = "Couche - Photo";
+"LAYER_STRING" = "Couche - Texte";
+
+"TEXT" = "Texte";
+"TRANSPARENCY" = "Transparence";
+"TEXT_COLOR" = "Couleur du texte";
+
+"CHOOSE_LAYER_TYPE" = "Type de couche";
+"SET_TEXT" = "Texte";
+"CHOOSE_PICTURE" = "Choisir une photo";
+"PREVIEW" = "Aperçu";
+"PICTURE" = "Photo";
+"PICK_EXISTING" = "Choisir une photo";
+"TAKE_NEW" = "Prendre une photo";
+
+"WHITE" ="Blanc";
+"YELLOW" = "Jaune";
+"GREEN" = "Vert";
+"ORANGE" = "Orange";
+"RED" = "Rouge";
+"PURPLE" = "Violet";
+"BLUE" = "Bleu";
+"BROWN" = "Marron";
+"GRAY" = "Gris";
+"BLACK" = "Noir";

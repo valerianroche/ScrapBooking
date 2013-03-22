@@ -55,7 +55,7 @@
     }
     
     self.ajoutBook = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [self.ajoutBook setTitle:@"Add new book..." forState:UIControlStateNormal];
+    [self.ajoutBook setTitle:NSLocalizedString(@"ADD_BOOK", nil) forState:UIControlStateNormal];
     [self.ajoutBook setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [[self.ajoutBook titleLabel] setFont:[UIFont boldSystemFontOfSize:17]];
     [self.ajoutBook addTarget:self action:@selector(creationBook) forControlEvents:UIControlEventTouchDown];
@@ -202,8 +202,8 @@
     }
     
     if (![[self.store allBooks] count]) {
-        [[cell textLabel] setText:@"No book available"];
-        [[cell detailTextLabel] setText:@"Tap the button to create one"];
+        [[cell textLabel] setText:NSLocalizedString(@"NO_BOOK", nil)];
+        [[cell detailTextLabel] setText:NSLocalizedString(@"BUTTON_CREATE_BOOK", nil)];
         [cell setAccessoryType:UITableViewCellAccessoryNone];
     }
     
@@ -219,7 +219,7 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0)
-        return @"Books";
+        return NSLocalizedString(@"BOOK",nil);
     else
         return @"";
 }

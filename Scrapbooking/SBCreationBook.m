@@ -35,11 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationItem setTitle:@"New Book"];
+    [self.navigationItem setTitle:NSLocalizedString(@"NEW_BOOK",nil)];
     
     [self.tableView setAllowsSelection:YES];
     UIButton *ajoutBook = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [ajoutBook setTitle:@"Let's go!" forState:UIControlStateNormal];
+    [ajoutBook setTitle:NSLocalizedString(@"CREATE_BOOK",nil) forState:UIControlStateNormal];
     [ajoutBook setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [[ajoutBook titleLabel] setFont:[UIFont boldSystemFontOfSize:17]];
     
@@ -92,7 +92,7 @@
 
 -(NSArray *)nomCouleurs {
     if (!nomCouleurs)
-        nomCouleurs = [NSArray arrayWithObjects:@"White", @"Yellow", @"Green", @"Orange", @"Red", @"Purple", @"Blue", @"Brown", @"Gray", @"Black", nil];
+        nomCouleurs = [NSArray arrayWithObjects:NSLocalizedString(@"WHITE",nil), NSLocalizedString(@"YELLOW",nil), NSLocalizedString(@"GREEN",nil), NSLocalizedString(@"ORANGE",nil), NSLocalizedString(@"RED",nil), NSLocalizedString(@"PURPLE",nil), NSLocalizedString(@"BLUE",nil), NSLocalizedString(@"BROWN",nil), NSLocalizedString(@"GRAY",nil), NSLocalizedString(@"BLACK",nil), nil];
     return nomCouleurs;
 }
 
@@ -135,11 +135,11 @@
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if (section == 0)
-        return @"Name";
+        return NSLocalizedString(@"NAME",nil);
     else if (section == 1)
-        return @"Description";
+        return NSLocalizedString(@"DESCRIPTION",nil);
     else if (section == 2)
-        return @"Appearance";
+        return NSLocalizedString(@"APPEARANCE",nil);
     else
         return @"";
 }
@@ -161,7 +161,7 @@
         
             if (!self.champNom) {
                 self.champNom = [[UITextField alloc] initWithFrame:CGRectMake(10, 0, cell.bounds.size.width-40, cell.bounds.size.height-0)];
-                [self.champNom setPlaceholder:@"Name"];
+                [self.champNom setPlaceholder:NSLocalizedString(@"NAME",nil)];
                 [self.champNom setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
                 [self.champNom setDelegate:self];
                 [self.champNom setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
